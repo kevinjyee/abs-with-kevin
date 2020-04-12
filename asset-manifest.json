@@ -1,17 +1,18 @@
 {
-  "main.css": "/abs-with-kevin/static/css/main.8857572f.chunk.css",
-  "main.js": "/abs-with-kevin/static/js/main.4f864ad3.chunk.js",
-  "main.js.map": "/abs-with-kevin/static/js/main.4f864ad3.chunk.js.map",
+  "main.css": "/abs-with-kevin/static/css/main.66591cfa.chunk.css",
+  "main.js": "/abs-with-kevin/static/js/main.1863c227.chunk.js",
+  "main.js.map": "/abs-with-kevin/static/js/main.1863c227.chunk.js.map",
   "runtime~main.js": "/abs-with-kevin/static/js/runtime~main.80834b29.js",
   "runtime~main.js.map": "/abs-with-kevin/static/js/runtime~main.80834b29.js.map",
   "static/css/2.cb67da6f.chunk.css": "/abs-with-kevin/static/css/2.cb67da6f.chunk.css",
-  "static/js/2.5f29f5d9.chunk.js": "/abs-with-kevin/static/js/2.5f29f5d9.chunk.js",
-  "static/js/2.5f29f5d9.chunk.js.map": "/abs-with-kevin/static/js/2.5f29f5d9.chunk.js.map",
+  "static/js/2.f0d53d74.chunk.js": "/abs-with-kevin/static/js/2.f0d53d74.chunk.js",
+  "static/js/2.f0d53d74.chunk.js.map": "/abs-with-kevin/static/js/2.f0d53d74.chunk.js.map",
   "index.html": "/abs-with-kevin/index.html",
-  "precache-manifest.2b07591791786504521cc0cd83de91d2.js": "/abs-with-kevin/precache-manifest.2b07591791786504521cc0cd83de91d2.js",
+  "precache-manifest.ce4af5588d5f76752ffe5b4403a688b4.js": "/abs-with-kevin/precache-manifest.ce4af5588d5f76752ffe5b4403a688b4.js",
   "service-worker.js": "/abs-with-kevin/service-worker.js",
   "static/css/2.cb67da6f.chunk.css.map": "/abs-with-kevin/static/css/2.cb67da6f.chunk.css.map",
-  "static/css/main.8857572f.chunk.css.map": "/abs-with-kevin/static/css/main.8857572f.chunk.css.map",
+  "static/css/main.66591cfa.chunk.css.map": "/abs-with-kevin/static/css/main.66591cfa.chunk.css.map",
   "static/media/abswithkevin.svg": "/abs-with-kevin/static/media/abswithkevin.7748d484.svg",
-  "static/media/antlogo.svg": "/abs-with-kevin/static/media/antlogo.b29324c4.svg"
+  "static/media/antlogo.svg": "/abs-with-kevin/static/media/antlogo.b29324c4.svg",
+  "static/media/fitness-svgrepo-com.svg": "/abs-with-kevin/static/media/fitness-svgrepo-com.9c6d56d2.svg"
 }
