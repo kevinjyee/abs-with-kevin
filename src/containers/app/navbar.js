@@ -1,5 +1,5 @@
 import React from 'react';
-import {CalendarOutlined, ClockCircleOutlined} from '@ant-design/icons';
+import {CalendarOutlined, ClockCircleOutlined, HomeOutlined} from '@ant-design/icons';
 import 'antd/dist/antd.css';
 import '../../index.css'
 
@@ -55,19 +55,19 @@ export default class NavBar extends React.Component {
                             >
                                 <Menu.Item key="1">
                                     <Link to='/abs-with-kevin'>
-                                        <CalendarOutlined />Today's Workout
+                                        <HomeOutlined /> Join
                                     </Link>
                                 </Menu.Item>
                                 <Menu.Item key="2">
-                                    <Link to='/abs-with-kevin/past-workouts'>
+                                    <Link to='/abs-with-kevin/todays-workout'>
+                                        <CalendarOutlined />Today's Workout
+                                    </Link>
+                                </Menu.Item>
+                                <Menu.Item key="3">
+                                    <Link to='/abs-with-kevin/past-workout'>
                                         <ClockCircleOutlined />Past Workouts
                                     </Link>
                                 </Menu.Item>
-                                {/*<Menu.Item key="3">*/}
-                                {/*    <Link to='/administration'>*/}
-                                {/*        <Icon type="menu" />Administration*/}
-                                {/*    </Link>*/}
-                                {/*</Menu.Item>*/}
 
                             </Menu>
                         </div>
