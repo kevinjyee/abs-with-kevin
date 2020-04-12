@@ -20,15 +20,15 @@ self.__precacheManifest = [
     "url": "/abs-with-kevin/static/js/runtime~main.80834b29.js"
   },
   {
-    "revision": "383d7b96e1ac990a4d04",
-    "url": "/abs-with-kevin/static/js/main.0a6f3fcd.chunk.js"
+    "revision": "9c9f9cc25e5209745497",
+    "url": "/abs-with-kevin/static/js/main.4da5be72.chunk.js"
   },
   {
     "revision": "7726a7b2dae7c1df76df",
     "url": "/abs-with-kevin/static/js/2.72182dbc.chunk.js"
   },
   {
-    "revision": "383d7b96e1ac990a4d04",
+    "revision": "9c9f9cc25e5209745497",
     "url": "/abs-with-kevin/static/css/main.d561635b.chunk.css"
   },
   {
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/abs-with-kevin/static/css/2.59ba6830.chunk.css"
   },
   {
-    "revision": "29ae233b3f827ca12cbe68a55478b0bb",
+    "revision": "5ec312db4da39003e18254db87fd9479",
     "url": "/abs-with-kevin/index.html"
   }
 ];
