@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/abs-with-kevin-2/precache-manifest.4b8289c4b9f0ec2e33174499dcaf98c6.js"
+  "/abs-with-kevin/precache-manifest.1687d0befe51f3516def3fa89e46dfaf.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/abs-with-kevin-2/index.html", {
+workbox.routing.registerNavigationRoute("/abs-with-kevin/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
