@@ -5,6 +5,7 @@ import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import { Button } from 'antd';
 import BannerSVGAnim from './BannerSVGAnim';
+import { Link } from 'react-router-dom';
 
 function Banner(props) {
     return (
@@ -32,17 +33,16 @@ function Banner(props) {
                     A comprehensive 6-pack solution during quarantine.
                 </p>
                 <div key="button" className="button-wrapper">
-                    <a href="/abs-with-kevin/todays-workout" target="_blank" rel="noopener noreferrer">
+                    <Link to='/abs-with-kevin/todays-workout'>
                         <Button type="primary">
                             Join Now
                         </Button>
-                    </a>
-                    <a href="/abs-with-kevin/past-workouts" target="_blank" rel="noopener noreferrer">
+                    </Link>
+                    <Link to='/abs-with-kevin/past-workouts'>
                         <Button style={{ margin: '0 16px' }} type="primary" ghost>
                             Past Workouts
                         </Button>
-                    </a>
-
+                    </Link>
                 </div>
             </QueueAnim>
             {!props.isMobile && (

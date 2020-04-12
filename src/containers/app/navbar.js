@@ -64,7 +64,7 @@ export default class NavBar extends React.Component {
                                     </Link>
                                 </Menu.Item>
                                 <Menu.Item key="3">
-                                    <Link to='/abs-with-kevin/past-workout'>
+                                    <Link to='/abs-with-kevin/past-workouts'>
                                         <ClockCircleOutlined />Past Workouts
                                     </Link>
                                 </Menu.Item>
