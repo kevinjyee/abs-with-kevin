@@ -4,6 +4,10 @@ self.__precacheManifest = [
     "url": "/abs-with-kevin/static/media/fitness-svgrepo-com.9c6d56d2.svg"
   },
   {
+    "revision": "d91609e7ee156c3b6fb5eedb26213340",
+    "url": "/abs-with-kevin/static/media/companyico.d91609e7.svg"
+  },
+  {
     "revision": "b29324c45ced02ca418e097ae8f52c77",
     "url": "/abs-with-kevin/static/media/antlogo.b29324c4.svg"
   },
@@ -16,23 +20,23 @@ self.__precacheManifest = [
     "url": "/abs-with-kevin/static/js/runtime~main.80834b29.js"
   },
   {
-    "revision": "d43d19bec13462f8866a",
-    "url": "/abs-with-kevin/static/js/main.17c106b4.chunk.js"
+    "revision": "80fbd4a9ef217fd62a78",
+    "url": "/abs-with-kevin/static/js/main.cbb55a8a.chunk.js"
   },
   {
-    "revision": "02c3cd93f3492f6c6282",
-    "url": "/abs-with-kevin/static/js/2.f0d53d74.chunk.js"
+    "revision": "32dbba51e2d87b6b3d0a",
+    "url": "/abs-with-kevin/static/js/2.f8b0d210.chunk.js"
   },
   {
-    "revision": "d43d19bec13462f8866a",
-    "url": "/abs-with-kevin/static/css/main.5d2be8e4.chunk.css"
+    "revision": "80fbd4a9ef217fd62a78",
+    "url": "/abs-with-kevin/static/css/main.d561635b.chunk.css"
   },
   {
-    "revision": "02c3cd93f3492f6c6282",
-    "url": "/abs-with-kevin/static/css/2.cb67da6f.chunk.css"
+    "revision": "32dbba51e2d87b6b3d0a",
+    "url": "/abs-with-kevin/static/css/2.59ba6830.chunk.css"
   },
   {
-    "revision": "89847e322d0d1aee35eabdc1426ee3fe",
+    "revision": "55b0c17d5374aa7af12ff3cd4c6ddf6a",
     "url": "/abs-with-kevin/index.html"
   }
 ];
