@@ -17,6 +17,12 @@ function Page3() {
                             <p key="p" className="page-content">
                                 I hope I can meet my Q1 OKRs after this. -Kevin Yee
                             </p>
+                        <p key="p" className="page-content">
+                            Perfect way to get off your my computer for couple minutes,
+                            connect with others and get a little workout
+                            in this crazy sit at home times. -Daniel Guettler
+                        </p>
+
                     </QueueAnim>
                 </OverPack>
             </div>
