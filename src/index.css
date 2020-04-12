@@ -29,7 +29,6 @@ button:disabled {
   margin-top: 50px;
   max-height: 300px;
   display: flex;
-  margin-bottom: 200px;
   justify-content: center;
 }
 
@@ -80,6 +79,11 @@ img {
   background-color: #1890ff;
 }
 
+.top-info {
+  font-family: AppleMyungjo;
+  font-size: 38px;
+  margin-top: 20px;
+}
 .page_grid {
   display: flex;
   flex-direction: row;
@@ -87,7 +91,7 @@ img {
 }
 
 .hundred_x_hundred {
-  float: left;
+  float: right;
   width: 200px;
   height: 100px;
     }
@@ -100,4 +104,10 @@ img {
   height:auto;
   display:block;
   z-index:999;
+}
+
+
+.half_page {
+  width: 55%;
+  height: 100%
 }

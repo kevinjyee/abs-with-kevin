@@ -6,13 +6,15 @@ import 'antd/dist/antd.css';
 import '../../index.css'
 import { Table } from 'antd';
 import { css } from '@emotion/core'
+import kevindesign from '../../assets/abswithkevin.svg'
 
 import {
   getAttendance
 } from '../../modules/attendance'
 import {Link} from "react-router-dom";
-import { SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '@ant-design/icons';
+import { SmileTwoTone, HeartTwoTone, CheckCircleTwoTone, TrophyTwoTone } from '@ant-design/icons';
 import antlogo from "../../assets/antlogo.svg";
+
 
 const tableStyle = css({
     'ant-table-thead': {
@@ -64,10 +66,15 @@ const columns = [
 ];
 
 const workoutColumns = [
-
     {
         title: 'Workout',
-        width: 50,
+        key: 'workout',
+        dataIndex: 'workout',
+        width: 40,
+    },
+    {
+        title: ' ',
+        width: 40,
         key: 'image',
         dataIndex: 'image',
         render:  (image) => {
@@ -78,15 +85,7 @@ const workoutColumns = [
 
 
         }
-    },
-
-    {
-        title: 'Excercise Name',
-        key: 'workout',
-        dataIndex: 'workout',
-        width: 40,
-    },
-
+    }
 ];
 export default class Home extends React.Component {
 
@@ -122,37 +121,28 @@ export default class Home extends React.Component {
         if (data && data.length > 0 && workoutData && workoutData.length) {
             return (
                 <div className='homebody'>
-                    <div className='schedule-leader'>
-                        <div className = 'leaderboard'>
-                            <div className='center_title'>
-                                <h3> <u> Schedule </u> </h3>
-                                <br></br>
-                                <ul>
-                                    <li><b>3:00 PM</b> Socialize</li>
-                                    <br></br>
-                                    <li><b>3:05 PM</b> ABS WITH KEVIN</li>
-                                    <br></br>
-                                    <li><b>3:10 PM</b> Group Photo/Farewells</li>
-                                </ul>
+                    <div className='top-info'>
+                        <div className='center_title'>
+                            <div>
+                                abs with kevin #12
                             </div>
                         </div>
-                        <div className='leader-board-wrapper'>
-                            <div className='center_title'>
-                                <h3> <u> Leaderboard </u> </h3>
-                                <Table columns={columns} dataSource={data} className={tableStyle} pagination={{ pageSize: 50 }} scroll={{ y: 300 }} />
-                            </div>
-
-                        </div>
-
                     </div>
-
-                    <div className='center_title'>
-                        <h1> <u> ABS WITH KEVIN #12 </u> </h1>
-                    </div>
-
                     <div className='page_grid'>
+                        <div className='half_page_ish'>
+                            <span>
+                                <div className='center_title'> <TrophyTwoTone  twoToneColor="#faad14"/> <h3> <u> Leaderboard  </u> </h3></div>
+                            <Table columns={columns} dataSource={data} className={tableStyle} pagination={{ pageSize: 50 }} scroll={{ y: 700 }} />
+                            </span>
 
+                        </div>
+                        <div className='half_page_ish'>
+                            <span>
+                                <div className='center_title'> <HeartTwoTone twoToneColor="#eb2f96" /> <h3> <u> Workout  </u> </h3></div>
                             <Table columns={workoutColumns} dataSource={workoutData} className={tableStyle} pagination={{ pageSize: 50 }} scroll={{ y: 700 }} />
+                            </span>
+
+                        </div>
                     </div>
 
                 </div>
@@ -162,7 +152,7 @@ export default class Home extends React.Component {
         {
             return(
                 <div className='half_page_ish'>
-                    <Table columns={columns} dataSource={[]} pagination={{ pageSize: 50 }} scroll={{ y: 600 }} />
+                    <Table columns={columns} dataSource={[]} pagination={{ pageSize: 50 }} scroll={{ y: 700 }} />
                 </div>
             )
         }
