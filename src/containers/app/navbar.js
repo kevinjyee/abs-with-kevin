@@ -46,29 +46,32 @@ export default class NavBar extends React.Component {
                                 <img className="brandName" src={kevindesign}/>
                             </a>
                         </div>
-                        <Menu
-                            mode="horizontal"
-                            onClick={this.handleClick}
-                            selectedKeys={[this.state.current]}
-                            style={{lineHeight: '64px'}}
-                        >
-                            <Menu.Item key="1">
-                                <Link to='/abs-with-kevin'>
-                                    <CalendarOutlined />Today's Workout
-                                </Link>
-                            </Menu.Item>
-                            <Menu.Item key="2">
-                                <Link to='/abs-with-kevin/past-workouts'>
-                                    <ClockCircleOutlined />Past Workouts
-                                </Link>
-                            </Menu.Item>
-                            {/*<Menu.Item key="3">*/}
-                            {/*    <Link to='/administration'>*/}
-                            {/*        <Icon type="menu" />Administration*/}
-                            {/*    </Link>*/}
-                            {/*</Menu.Item>*/}
+                        <div className='menu'>
+                            <Menu
+                                mode="horizontal"
+                                onClick={this.handleClick}
+                                selectedKeys={[this.state.current]}
+                                style={{lineHeight: '64px'}}
+                            >
+                                <Menu.Item key="1">
+                                    <Link to='/abs-with-kevin'>
+                                        <CalendarOutlined />Today's Workout
+                                    </Link>
+                                </Menu.Item>
+                                <Menu.Item key="2">
+                                    <Link to='/abs-with-kevin/past-workouts'>
+                                        <ClockCircleOutlined />Past Workouts
+                                    </Link>
+                                </Menu.Item>
+                                {/*<Menu.Item key="3">*/}
+                                {/*    <Link to='/administration'>*/}
+                                {/*        <Icon type="menu" />Administration*/}
+                                {/*    </Link>*/}
+                                {/*</Menu.Item>*/}
 
-                        </Menu>
+                            </Menu>
+                        </div>
+
                     </div>
                 </div>
             )

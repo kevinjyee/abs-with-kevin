@@ -7,6 +7,7 @@ import '../../index.css'
 import { Table } from 'antd';
 import { css } from '@emotion/core'
 import kevindesign from '../../assets/abswithkevin.svg'
+import fitnessguy from '../../assets/fitness-svgrepo-com.svg'
 
 import {
   getAttendance
@@ -124,6 +125,7 @@ export default class Home extends React.Component {
                     <div className='top-info'>
                         <div className='center_title'>
                             <div>
+                                <img  className="brandLogo" src={fitnessguy}/>
                                 abs with kevin #12
                             </div>
                         </div>
