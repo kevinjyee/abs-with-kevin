@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/abs-with-kevin/precache-manifest.d1ff864b8738a3814f03dbd2c8c3dd21.js"
+  "/abs-with-kevin/precache-manifest.cd20e54bc291594af03214d3101b24d4.js"
 );
 
 workbox.clientsClaim();
