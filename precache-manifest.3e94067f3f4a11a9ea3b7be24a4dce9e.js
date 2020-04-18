@@ -20,23 +20,23 @@ self.__precacheManifest = [
     "url": "/abs-with-kevin/static/js/runtime~main.80834b29.js"
   },
   {
-    "revision": "f94f5efb34748bcd7b41",
-    "url": "/abs-with-kevin/static/js/main.5a680b2f.chunk.js"
+    "revision": "660dc1914edfcaf2d61a",
+    "url": "/abs-with-kevin/static/js/main.845ef626.chunk.js"
   },
   {
-    "revision": "081086d51b18420fa3fd",
-    "url": "/abs-with-kevin/static/js/2.0660018d.chunk.js"
+    "revision": "9889d0281c6d49a5b650",
+    "url": "/abs-with-kevin/static/js/2.f9154889.chunk.js"
   },
   {
-    "revision": "f94f5efb34748bcd7b41",
+    "revision": "660dc1914edfcaf2d61a",
     "url": "/abs-with-kevin/static/css/main.a1a9dae8.chunk.css"
   },
   {
-    "revision": "081086d51b18420fa3fd",
-    "url": "/abs-with-kevin/static/css/2.59ba6830.chunk.css"
+    "revision": "9889d0281c6d49a5b650",
+    "url": "/abs-with-kevin/static/css/2.5971be1f.chunk.css"
   },
   {
-    "revision": "5d759eaeac892926ca6e8c37c0549ef7",
+    "revision": "a786f163b4d1f4c41f0cc58eece0e449",
     "url": "/abs-with-kevin/index.html"
   }
 ];
