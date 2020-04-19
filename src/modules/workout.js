@@ -2,7 +2,6 @@ import axios from 'axios/index';
 export const GET_WORKOUT_REQUESTED = 'Workout/GET_WORKOUT_REQUESTED'
 export const GET_WORKOUT_RECEIVED = 'Workout/GET_WORKOUT_RECEIEVED'
 
-
 export default (state = [], action) => {
   switch (action.type) {
     case GET_WORKOUT_REQUESTED:
@@ -48,3 +47,15 @@ export function requestWorkout() {
     type: GET_WORKOUT_REQUESTED,
   };
 }
+
+
+
+export const sendShoutOut = params => (dispatch) => {
+  dispatch(requestWorkout);
+  axios.post(`https://v2-api.sheety.co/d15b0998a5ba722b2df7464f83e6a997/absWithKevinApi/shoutouts`,
+      params
+  ).then((res) => {
+
+  }).catch((err) => {
+  });
+};

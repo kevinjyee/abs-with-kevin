@@ -96,18 +96,15 @@
   button.lang {
     display: block;
     margin: 29px auto 16px;
-    color: ;
-    border-color: ;
+
   }
   div.version {
     display: block;
     margin: 29px auto 16px;
   }
   div.version > .ant-select-selection {
-    color: ;
   }
   div.version > .ant-select-selection:not(:hover) {
-    border-color: ;
   }
   .popover-menu {
     width: 300px;

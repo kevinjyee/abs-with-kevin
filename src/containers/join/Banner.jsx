@@ -54,8 +54,5 @@ function Banner(props) {
     );
 }
 
-Banner.propTypes = {
-    isMobile: PropTypes.bool.isRequired,
-};
 
 export default Banner;

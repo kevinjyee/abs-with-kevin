@@ -74,6 +74,16 @@ img {
   margin-right: 10%;
 }
 
+.shoutOutSubmit {
+  margin-top: 10px;
+  position: relative;
+  left: 90px;
+}
+
+.submitHeart {
+  top: -3px;
+  position: relative;
+}
 
 .top-info {
   font-family: AppleMyungjo;

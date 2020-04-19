@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { getAttendance } from './modules/attendance';
-import { getWorkout } from "./modules/workout";
+import { getWorkout, sendShoutOut } from "./modules/workout";
 
 import Home from './containers/home';
 import ReactGA from 'react-ga';
@@ -15,7 +15,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ getAttendance, getWorkout }, dispatch);
+    return bindActionCreators({ getAttendance, sendShoutOut, getWorkout }, dispatch);
 }
 export const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home);
 
