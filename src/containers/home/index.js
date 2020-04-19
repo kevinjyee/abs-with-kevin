@@ -13,6 +13,7 @@ import fitnessguy from '../../assets/fitness-svgrepo-com.svg'
 import { Popover, Input, Button, Drawer, Divider, Col, Row, message } from 'antd';
 import { Line } from '@antv/g2plot';
 import ReactG2Plot from 'react-g2plot';
+import { enquireScreen } from 'enquire-js';
 import {
   getAttendance
 } from '../../modules/attendance'
@@ -94,6 +95,7 @@ const workoutColumns = [
         }
     }
 ];
+
 export default class Home extends React.Component {
 
     constructor(props) {
@@ -104,6 +106,7 @@ export default class Home extends React.Component {
             textValue: '',
             drawerVisible: false,
             selectedDrawerRow: null,
+            isMobile: false,
 
             columns: [
                 {
@@ -151,6 +154,9 @@ export default class Home extends React.Component {
                     dataIndex: 'name',
                     width: 50,
                     render: (name, row) => {
+                        if(this.state.isMobile){
+                            return <div>{name}</div>
+                        }
                         return <a onClick={() => this.showDrawer(row)} key={`a-name`}>
                             {name}
                         </a>
@@ -194,6 +200,11 @@ export default class Home extends React.Component {
         this.setState({selectedDrawerRow: this.props.attendance})
         this.props.getWorkout();
         this.setState({ workoutList: this.props.workout });
+        enquireScreen((b) => {
+            this.setState({
+                isMobile: !!b,
+            });
+        });
     }
 
     hide = () => {
@@ -305,57 +316,60 @@ export default class Home extends React.Component {
                         </div>
                     </div>
 
-                    <Drawer
-                        width={640}
-                        placement="right"
-                        closable={false}
-                        onClose={this.hideDrawer}
-                        visible={this.state.drawerVisible}
-                    >
-                        <p className="site-description-item-profile-p" style={{ ...pStyle, marginBottom: 24 }}>
-                            User Profile
-                        </p>
-                        <p className="site-description-item-profile-p" style={pStyle}>
-                            Personal
-                        </p>
-                        <Row>
-                            <Col span={12}>
-                                <DescriptionItem title="Name" content={selectedUser.name} />
-                            </Col>
-                            <Col span={12}>
-                                <DescriptionItem title="Rank" content={selectedUser.rank} />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col span={12}>
-                                <DescriptionItem title="City" content="Zoom Online" />
-                            </Col>
-                            <Col span={12}>
-                                <DescriptionItem title="Country" content="United States" />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col span={12}>
-                                <DescriptionItem title="Birthday" content="???" />
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col span={24}>
-                                <DescriptionItem
-                                    title="Message"
-                                    content="Abs is fun!"
-                                />
-                            </Col>
-                        </Row>
-                        <Divider />
-                        <p className="site-description-item-profile-p" style={pStyle}>
-                            Attendance
-                        </p>
-                        <Row>
-                            <ReactG2Plot className="attendanceGraph" Ctor={Line} config={config}/>
-                        </Row>
-                        <Divider />
-                    </Drawer>
+                    <div className='drawer_container'>
+                        <Drawer className='drawer_container'
+                            width={640}
+                            placement="right"
+                            closable={false}
+                            onClose={this.hideDrawer}
+                            visible={this.state.drawerVisible}
+                        >
+                            <p className="site-description-item-profile-p" style={{ ...pStyle, marginBottom: 24 }}>
+                                User Profile
+                            </p>
+                            <p className="site-description-item-profile-p" style={pStyle}>
+                                Personal
+                            </p>
+                            <Row>
+                                <Col span={12}>
+                                    <DescriptionItem title="Name" content={selectedUser.name} />
+                                </Col>
+                                <Col span={12}>
+                                    <DescriptionItem title="Rank" content={selectedUser.rank} />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col span={12}>
+                                    <DescriptionItem title="City" content="Zoom Online" />
+                                </Col>
+                                <Col span={12}>
+                                    <DescriptionItem title="Country" content="United States" />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col span={12}>
+                                    <DescriptionItem title="Birthday" content="???" />
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col span={24}>
+                                    <DescriptionItem
+                                        title="Message"
+                                        content="Abs is fun!"
+                                    />
+                                </Col>
+                            </Row>
+                            <Divider />
+                            <p className="site-description-item-profile-p" style={pStyle}>
+                                Attendance
+                            </p>
+                            <Row>
+                                <ReactG2Plot className="attendanceGraph" Ctor={Line} config={config}/>
+                            </Row>
+                            <Divider />
+                        </Drawer>
+                    </div>
+
                 </div>
             )
         }
