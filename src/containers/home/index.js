@@ -35,7 +35,7 @@ const pStyle = {
     marginBottom: 16,
 };
 
-const sampledata = [
+const data = [
     { year: '1991', value: 3 },
     { year: '1992', value: 4 },
     { year: '1993', value: 3.5 },
@@ -47,18 +47,7 @@ const sampledata = [
     { year: '1999', value: 13 },
 ];
 
-let config = {
-    title: {
-        visible: true,
-        text: 'Attendance Tracker',
-    },
-    padding: 'auto',
-    forceFit: true,
-    sampledata,
-    xField: 'year',
-    yField: 'value',
-    smooth: true,
-};
+
 const DescriptionItem = ({ title, content }) => (
     <div
         className="site-description-item-profile-wrapper"
@@ -263,17 +252,30 @@ export default class Home extends React.Component {
     }
 
     render() {
-        let data = this.state.attendanceList;
+        let attendanceData = this.state.attendanceList;
         let workoutData = this.state.workoutList;
 
-        if (data && data.length > 0 && workoutData && workoutData.length) {
-            let selectedUser = this.state.selectedDrawerRow || data[0];
-            let linedata = []
+        if (attendanceData && attendanceData.length > 0 && workoutData && workoutData.length) {
+            let selectedUser = this.state.selectedDrawerRow || attendanceData[0];
+            let data= []
             for (const [key, value] of Object.entries(selectedUser)) {
                 if (!['id','rank','name','avy', 'total'].includes(key)) {
-                    linedata.push({'year': key, 'value': value})
+                    data.push({'year': key, 'value': value})
                 }
             }
+
+            let config = {
+                title: {
+                    visible: true,
+                    text: 'Attendance Tracker',
+                },
+                padding: 'auto',
+                forceFit: true,
+                data,
+                xField: 'year',
+                yField: 'value',
+                height: '300'
+            };
 
 
             return (
@@ -290,7 +292,7 @@ export default class Home extends React.Component {
                         <div className='half_page_ish'>
                             <span>
                                 <div className='center_title'> <TrophyTwoTone  twoToneColor="#faad14"/> <h3> <u> Leaderboard  </u> </h3></div>
-                            <Table columns={this.state.columns} dataSource={data} className={tableStyle} pagination={{ pageSize: 50 }} scroll={{ y: 700 }} />
+                            <Table columns={this.state.columns} dataSource={attendanceData} className={tableStyle} pagination={{ pageSize: 50 }} scroll={{ y: 700 }} />
                             </span>
 
                         </div>
@@ -350,7 +352,7 @@ export default class Home extends React.Component {
                             Attendance
                         </p>
                         <Row>
-                            <ReactG2Plot className="attendance-graph" Ctor={Line} config={config}/>
+                            <ReactG2Plot className="attendanceGraph" Ctor={Line} config={config}/>
                         </Row>
                         <Divider />
                     </Drawer>

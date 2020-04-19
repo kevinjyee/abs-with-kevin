@@ -80,6 +80,9 @@ img {
   left: 90px;
 }
 
+.attendanceGraph {
+  width: 100%;
+}
 .submitHeart {
   top: -3px;
   position: relative;
