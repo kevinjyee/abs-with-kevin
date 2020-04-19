@@ -112,6 +112,13 @@ img {
   z-index:999;
 }
 
+.loading {
+  height: 150px;
+  width: 150px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+}
 
 .half_page {
   width: 55%;
