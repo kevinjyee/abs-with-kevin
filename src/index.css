@@ -80,6 +80,11 @@ img {
   left: 90px;
 }
 
+.achievement-avatar {
+  height:  100px;
+  width: 100px;
+}
+
 .attendanceGraph {
   width: 100%;
 }

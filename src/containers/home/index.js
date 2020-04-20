@@ -7,7 +7,8 @@ import '../../index.css'
 import { Table } from 'antd';
 import { Avatar } from 'antd';
 import { css } from '@emotion/core'
-import kevindesign from '../../assets/abswithkevin.svg'
+import spuddy from '../../assets/spuddy.png'
+import spudlet from '../../assets/spudlet.png'
 import loading_ico from '../../assets/loading.gif'
 import fitnessguy from '../../assets/fitness-svgrepo-com.svg'
 import { Popover, Input, Button, Drawer, Divider, Col, Row, message } from 'antd';
@@ -275,6 +276,14 @@ export default class Home extends React.Component {
                 }
             }
 
+            let achievement_img = spuddy;
+            let achievement_txt = "You're a Spuddy! A nice round potato. You're still an ab newbie! \nNext Level: 15 Classes"
+            if (selectedUser.total >= 15)
+            {
+                achievement_img = spudlet
+                achievement_txt = "You're a Spudlett! You're leaning out and becoming a strong potato. \n Next Level: 30 Classes"
+            }
+
             let config = {
                 title: {
                     visible: true,
@@ -295,7 +304,7 @@ export default class Home extends React.Component {
                         <div className='center_title'>
                             <div>
                                 <img  className="brandLogo" src={fitnessguy}/>
-                                abs with kevin #{Object.keys(data[0]).length-4}
+                                abs with kevin #{Object.keys(attendanceData[0]).length-4}
                             </div>
                         </div>
                     </div>
@@ -365,6 +374,18 @@ export default class Home extends React.Component {
                             </p>
                             <Row>
                                 <ReactG2Plot className="attendanceGraph" Ctor={Line} config={config}/>
+                            </Row>
+                            <Divider />
+                            <p className="site-description-item-profile-p" style={pStyle}>
+                                Achievements
+                            </p>
+                            <Row>
+                                <Col span={12}>
+                                    <img className='achievement-avatar'  src={achievement_img}/>
+                                </Col>
+                                <Col span={12}>
+                                    {achievement_txt}
+                                </Col>
                             </Row>
                             <Divider />
                         </Drawer>
