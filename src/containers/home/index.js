@@ -9,6 +9,7 @@ import { Avatar } from 'antd';
 import { css } from '@emotion/core'
 import spuddy from '../../assets/spuddy.png'
 import spudlet from '../../assets/spudlet.png'
+import juggertot from '../../assets/juggertot.png'
 import loading_ico from '../../assets/loading.gif'
 import fitnessguy from '../../assets/fitness-svgrepo-com.svg'
 import { Popover, Input, Button, Drawer, Divider, Col, Row, message } from 'antd';
@@ -282,6 +283,12 @@ export default class Home extends React.Component {
             {
                 achievement_img = spudlet
                 achievement_txt = "You're a Spudlett! You're leaning out and becoming a strong potato. \n Next Level: 30 Classes"
+            }
+
+            if (selectedUser.total >= 30)
+            {
+                achievement_img = juggertot
+                achievement_txt = "JUGGERTOT! You're at your final evolution!\n You've attended 30 classes and on your path to being a juggernaut in the ab industry!"
             }
 
             let config = {
