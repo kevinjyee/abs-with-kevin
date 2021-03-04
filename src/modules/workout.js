@@ -28,7 +28,7 @@ export default (state = [], action) => {
 
 export const getWorkout = params => (dispatch) => {
   dispatch(requestWorkout);
-  axios.get(`https://v2-api.sheety.co/d15b0998a5ba722b2df7464f83e6a997/absWithKevinApi/workout`, {
+  axios.get(`https://api.sheety.co/0c3899d6d69d5ed4a6106d839a5cc4d0/absWithKevinApi/workout`, {
   }).then((res) => {
     dispatch(receiveWorkout(res.data));
   }).catch((err) => {
@@ -52,7 +52,7 @@ export function requestWorkout() {
 
 export const sendShoutOut = params => (dispatch) => {
   dispatch(requestWorkout);
-  axios.post(`https://v2-api.sheety.co/d15b0998a5ba722b2df7464f83e6a997/absWithKevinApi/shoutouts`,
+  axios.post(`https://api.sheety.co/0c3899d6d69d5ed4a6106d839a5cc4d0/absWithKevinApi/shoutouts`,
       params
   ).then((res) => {
 

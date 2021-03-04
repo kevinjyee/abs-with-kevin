@@ -105,6 +105,7 @@ export default class Home extends React.Component {
         this.state = {
             attendanceList: this.props.attendance || [],
             workoutList: this.props.workout || [],
+            days: this.props.days || [],
             textValue: '',
             drawerVisible: false,
             selectedDrawerRow: null,
@@ -199,9 +200,12 @@ export default class Home extends React.Component {
     componentDidMount() {
         this.props.getAttendance();
         this.setState({ attendanceList: this.props.attendance });
+
         this.setState({selectedDrawerRow: this.props.attendance})
         this.props.getWorkout();
         this.setState({ workoutList: this.props.workout });
+        this.props.getNumberDays();
+        this.setState({days: this.props.days})
         enquireScreen((b) => {
             this.setState({
                 isMobile: !!b,
@@ -262,13 +266,18 @@ export default class Home extends React.Component {
         if (prevProps.workout !== this.props.workout) {
             this.setState({ workoutList: this.props.workout });
         }
+
+        if (prevProps.days !== this.props.days) {
+            this.setState({ days: this.props.days });
+        }
     }
 
     render() {
         let attendanceData = this.state.attendanceList;
         let workoutData = this.state.workoutList;
+        let days = this.state.days;
 
-        if (attendanceData && attendanceData.length > 0 && workoutData && workoutData.length) {
+        if (attendanceData && attendanceData.length > 0 && workoutData && workoutData.length && days) {
             let selectedUser = this.state.selectedDrawerRow || attendanceData[0];
             let data= []
             for (const [key, value] of Object.entries(selectedUser)) {
@@ -311,7 +320,7 @@ export default class Home extends React.Component {
                         <div className='center_title'>
                             <div>
                                 <img  className="brandLogo" src={fitnessguy}/>
-                                abs with kevin #{Object.keys(attendanceData[0]).length-4}
+                                abs with kevin #{days.length-3}
                             </div>
                         </div>
                     </div>

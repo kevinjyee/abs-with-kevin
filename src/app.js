@@ -1,6 +1,6 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { getAttendance } from './modules/attendance';
+import { getAttendance, getNumberDays } from './modules/attendance';
 import { getWorkout, sendShoutOut } from "./modules/workout";
 
 import Home from './containers/home';
@@ -11,11 +11,12 @@ function mapStateToProps(state) {
         attendance: state.attendance.data,
         loading: state.attendance.loading,
         workout: state.workout.data,
+        days: state.days.data
     }
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ getAttendance, sendShoutOut, getWorkout }, dispatch);
+    return bindActionCreators({ getAttendance, sendShoutOut, getWorkout, getNumberDays }, dispatch);
 }
 export const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home);
 
